@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const compression = require("compression");
 
 const PORT = process.env.PORT || 3001;
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://kenneth03:KEN123>@cluster0.o0h2o.mongodb.net/BUDGET_PWD?retryWrites=true&w=majority";
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://kenneth03:KEN123@cluster0.o0h2o.mongodb.net/budget_pwd?retryWrites=true&w=majority'
 
 const app = express();
 
@@ -18,7 +18,8 @@ app.use(express.static("public"));
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  useUnifiedTopology: true
 });
 
 // routes
