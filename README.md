@@ -2,9 +2,9 @@
 
 HW 19. Progressive Web Applications (PWA) Challenge: Budget Tracker
 Link to site
-Repo Link -
+Repo Link - https://github.com/sirbenji03/budget_tracker.git
 
-Live Link - 
+Live Link - https://budget-tracker-heroku03.herokuapp.com/
 Description
 This application allows users to budget online/offline.
 
