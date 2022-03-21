@@ -2,10 +2,10 @@ const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 const compression = require("compression");
+require("dotenv").config();
 
 const PORT = process.env.PORT || 3001;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://kenneth03:KEN123@cluster0.o0h2o.mongodb.net/budget_pwd?retryWrites=true&w=majority'
-
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget_pwd";
 const app = express();
 
 app.use(logger("dev"));
@@ -26,5 +26,5 @@ mongoose.connect(MONGODB_URI, {
 app.use(require("./routes/api.js"));
 
 app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
+  console.log(`App connected on port ${PORT}!`);
 });
